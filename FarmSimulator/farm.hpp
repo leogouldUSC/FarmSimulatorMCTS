@@ -3,11 +3,11 @@
 //  FarmSimulator
 //
 //  Created by Leo Gould on 8/1/19.
-//  Copyright © 2019 Leo Gould. All rights reserved.
+//  implementation is based on the go implementation here by Petter Strandmark,
+//  https://github.com/PetterS/monte-carlo-tree-search/blob/master/games/go.h
+//  https://github.com/PetterS/monte-carlo-tree-search/blob/master/games/go.cpp
 //
 
-// Petter Strandmark 2013
-// petter.strandmark@gmail.com
 
 #ifndef FARM_H
 #define FARM_H
@@ -256,7 +256,6 @@ public:
             int day = a.second;
             plantedCrops[a.first] = ++day;
             if(day == 2){
-//                plantedCrops.erase(a.first);
                 int i, j;
                 std::tie(i, j) = ind_to_ij(a.first);
                 if(board[i][j] == corn){
@@ -306,7 +305,6 @@ public:
     
     static const int M = 1;
     static const int N = 1;
-    //unsigned int time = 0;
     static const int board_x = 25;
     static const int board_y = 25;
     static const int board_width = 40;
